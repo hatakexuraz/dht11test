@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <ListView
-        android:id="@+id/list"
+    <Button
+        android:id="@+id/btn_list_act"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:text="LIST DATA"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:text="Temperature"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/temperature_line"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+            <TextView
+                android:text="Humidity"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_humi"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
