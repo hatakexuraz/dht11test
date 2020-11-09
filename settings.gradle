@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "dht11sensordata"
+rootProject.name = "dht11test2"
